@@ -5,12 +5,14 @@ import { ComparadorFrutasComponent } from './components/comparador-frutas/compar
 import { ListadoFrutasComponent } from './components/listado-frutas/listado-frutas.component';
 import { BackofficeComponent } from './components/backoffice/backoffice.component';
 import { BackofficeGuard } from './guards/backoffice.guard';
+import { GestionFrutasComponent } from './components/gestion-frutas/gestion-frutas.component';
 
 const routes: Routes = [
   {path: 'home', component: ComparadorFrutasComponent},
   {path: 'listado-frutas', component: ListadoFrutasComponent},
   {path: 'comparador-frutas', component: ComparadorFrutasComponent},
   {path: 'privado', component: BackofficeComponent, canActivate: [BackofficeGuard]},
+  {path: 'gestion-frutas/:id', component: GestionFrutasComponent, canActivate: [BackofficeGuard]},
   {path: 'login', component: LoginComponent},
   {path: '', redirectTo: '/home', pathMatch: 'full'}
 ];

@@ -15,12 +15,13 @@ export class AppComponent {
   }
 
   logout() {
-    console.trace('BackofficeComponent logout');
+    console.trace('AppComponent logout');
     this.loginService.logout();
     this.router.navigate(['login']);
   }
 
   logueado() {
+    console.trace('AppComponent logueado');
     if (!this.loginService.isLogged()) {
       return false;
     }

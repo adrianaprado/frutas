@@ -30,12 +30,4 @@ export class ListadoFrutasComponent implements OnInit {
       this.frutas = data.map(el => el);
     });
   }
-
-  eliminarFruta(id: number) {
-    console.trace('CrudFrutasComponent eliminarFruta');
-    this.frutaService.delete(id).subscribe(data => {
-      console.debug('Datos recibidos $%o', data);
-      this.recargarLista();
-    });
-  }
 }

@@ -12,6 +12,7 @@ import { ComparadorFrutasComponent } from './components/comparador-frutas/compar
 import { LoginComponent } from './components/login/login.component';
 import { ListadoFrutasComponent } from './components/listado-frutas/listado-frutas.component';
 import { FrutaCardComponent } from './components/fruta-card/fruta-card.component';
+import { GestionFrutasComponent } from './components/gestion-frutas/gestion-frutas.component';
 
 // Providers o servicios
 import { LoginService } from './providers/login.service';
@@ -21,6 +22,7 @@ import { FrutaService } from './providers/fruta.service';
 import { BackofficeGuard } from './guards/backoffice.guard';
 import { BackofficeComponent } from './components/backoffice/backoffice.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -28,7 +30,8 @@ import { BackofficeComponent } from './components/backoffice/backoffice.componen
     ListadoFrutasComponent,
     FrutaCardComponent,
     LoginComponent,
-    BackofficeComponent
+    BackofficeComponent,
+    GestionFrutasComponent
   ],
   imports: [
     BrowserModule,

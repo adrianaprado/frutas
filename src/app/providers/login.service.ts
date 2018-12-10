@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { Usuario } from '../models/usuario';
 
 const USUARIO_NOMBRE = 'admin';
-const USUARIO_PASSWORD = '12345';
+const USUARIO_PASSWORD = 'admin';
 
 @Injectable({
   providedIn: 'root'
