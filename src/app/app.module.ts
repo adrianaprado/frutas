@@ -1,18 +1,47 @@
+// Modulos de Angular
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
 import { AppRoutingModule } from './app-routing.module';
+import { FormsModule } from '@angular/forms';
+import {HttpClientModule} from '@angular/common/http';
+import { ReactiveFormsModule } from '@angular/forms';
+
+// Componentes
 import { AppComponent } from './app.component';
+import { ComparadorFrutasComponent } from './components/comparador-frutas/comparador-frutas.component';
+import { LoginComponent } from './components/login/login.component';
+import { ListadoFrutasComponent } from './components/listado-frutas/listado-frutas.component';
+import { FrutaCardComponent } from './components/fruta-card/fruta-card.component';
+
+// Providers o servicios
+import { LoginService } from './providers/login.service';
+import { FrutaService } from './providers/fruta.service';
+
+// Guards
+import { BackofficeGuard } from './guards/backoffice.guard';
+import { BackofficeComponent } from './components/backoffice/backoffice.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    ComparadorFrutasComponent,
+    ListadoFrutasComponent,
+    FrutaCardComponent,
+    LoginComponent,
+    BackofficeComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule, // ngmodel banana in a box
+    HttpClientModule, // Peticiones http asincronas
+    ReactiveFormsModule
   ],
-  providers: [],
+  providers: [
+    FrutaService,
+    LoginService,
+    BackofficeGuard
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

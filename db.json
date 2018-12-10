@@ -1,0 +1,47 @@
+{
+  "frutas": [
+    {
+      "id": 1,
+      "nombre": "banana",
+      "precio": 3.15,
+      "calorias": 500,
+      "colores": [
+        "amarillo",
+        "negro"
+      ],
+      "oferta": true,
+      "descuento": 20,
+      "imagen": "http://padeladdict.com/wp-content/uploads/2012/12/platano2.jpg",
+      "cant": 1
+    },
+    {
+      "id": 2,
+      "nombre": "pera",
+      "precio": 2,
+      "calorias": 350,
+      "colores": [
+        "amarillo",
+        "verde"
+      ],
+      "oferta": false,
+      "descuento": 0,
+      "imagen": "http://www.cajanature.com/405-large_default/pera-ecologica-.jpg",
+      "cant": 1
+    },
+    {
+      "id": 3,
+      "nombre": "fresa",
+      "precio": 0.75,
+      "calorias": 100,
+      "colores": [
+        "rosa",
+        "rojo",
+        "verde"
+      ],
+      "oferta": true,
+      "descuento": 15,
+      "imagen": "http://libbys.es/wordpress/wp-content/uploads/2018/05/fresas.jpg",
+      "cant": 1
+    }
+  ]
+}

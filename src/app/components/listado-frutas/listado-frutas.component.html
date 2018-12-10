@@ -1,0 +1,24 @@
+<div class="text-left mt-2">
+  <h2 class="text-center">
+    Crud completo para las frutas
+  </h2>
+
+  <h3>Listado de frutas</h3>
+  <a class="btn btn-outline-success" [routerLink]="['../crud-frutas-detalle', -1]">Crear nueva fruta</a>
+  <div class="row mt-3">
+    <div class="col">
+      <ul class="list-group">
+        <li class="list-group-item" *ngFor="let fr of frutas">
+          <div class="row">
+            <div class="col col-11">
+              <a [routerLink]="['../crud-frutas-detalle', fr.id]">{{fr.nombre}}</a>
+            </div>
+            <div class="col col-1">
+              <i (click)="eliminarFruta(fr.id)" class="text-danger ml-4 fas fa-trash-alt"></i>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>

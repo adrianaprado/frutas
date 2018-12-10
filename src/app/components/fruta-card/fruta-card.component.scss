@@ -1,0 +1,47 @@
+.card{
+    width: 18rem;
+}
+
+/*TODO los colores deben estar definidos en styles global y usar variables*/
+
+.card-head{
+    position: relative;
+
+    .descuento{
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        background-color: red;
+        border-radius: 50%;
+        color: white;
+        font-size: 1.3em;
+        font-weight: 600;
+        padding: 10px 5px;
+    }
+
+    .calorias{
+        position: absolute;
+        color: green;
+        font-size: 1.1em;
+        border-radius: 40%;
+        bottom: 0px;
+        right: 10px;
+    }
+}
+
+img.card-img-top{
+    width: 100%;
+    height: 200px;
+}
+
+.oferta{
+    font-size: 1.5em;
+}
+
+.positivo{
+    color: green;
+}
+
+.negativo{
+    color:red
+}

@@ -1,0 +1,58 @@
+<div class="mt-2 text-left">
+  <h2 class="text-center">Comparador Frutas</h2>
+
+  <hr>
+
+  <div class="row">
+    <!-- Lista Frutas -->
+    <div class="col col-2">
+      <h4 class="text-center">Lista frutas</h4>
+      <div class="list-group">
+        <button type="button" class="list-group-item list-group-item-action active" 
+        *ngFor="let f of frutas" (click)="mostrar(f)" [class.active]="f == f1 || f == f2">
+          {{f.nombre}}
+        </button>
+      </div>
+    </div>
+
+    <!-- Cards -->
+    <div class="col">
+      <h4>Detalle frutas</h4>
+      <div class="row">
+        <div class="col mb-2">
+          <app-fruta-card [_fruta]="f1" [_fruta2]="f2" (clickCompra)="actualizarCarro($event)"></app-fruta-card>
+        </div>
+        <div class="col mb-2">
+          <app-fruta-card [_fruta]="f2" [_fruta2]="f1" (clickCompra)="actualizarCarro($event)"></app-fruta-card>
+        </div>
+        <div class="col col-3 mb-2">
+          <div class="card" style="width: 14rem;">
+            <div class="card-body">
+              <h6 class="card-title"><i class="fas fa-shopping-cart"></i> Total carro: {{precioTotal | number:'1.2-2'}} &euro;</h6>
+              <hr>
+              <div *ngFor="let fr of frutasRecibidas">
+                <p class="card-text"> <img class="img-compra" src="{{fr.imagen}}" alt="imagen"> {{fr.precio}} &euro; <i (click)="borrarProducto(fr)" class="text-danger ml-4 fas fa-trash-alt"></i></p>
+                <p></p>
+                <div class="input-group mb-3">
+                  <div class="input-group-prepend" id="button-addon3">
+                    <button class="btn btn-outline-secondary" type="button" (click)="anyadir(fr)">+</button>
+                  </div>
+                    <input type="number" readonly class="form-control text-center" value="{{fr.cant}}">
+                  <div class="input-group-prepend" id="button-addon3">
+                    <button class="btn btn-outline-secondary" type="button" (click)="quitar(fr)">&minus;</button>
+                  </div>
+                </div>
+                <hr>
+              </div>
+              <p class="card-text">Total: {{precioTotal | number:'1.2-2'}} &euro;</p>
+              <div class="row">
+                <div class="col col-5"><button href="#" class="btn btn-danger">Volver</button></div>
+                <div class="col"><button href="#" class="btn btn-primary">Comprar</button></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
