@@ -13,7 +13,7 @@ export class ListadoFrutasComponent implements OnInit {
   frutaDetalle: Fruta;
   idFruta: number;
   todas: boolean;
-  nueva: string;
+  nombreBuscar: string;
 
   constructor(public frutaService: FrutaService, public router: Router) {
     console.trace('ListadoFrutasComponent constructor');

@@ -1,3 +1,13 @@
 .img-compra{
     width: 50px
 }
+
+.list-group{
+    max-height: 400px;
+    margin-bottom: 10px;
+    overflow-y:auto;
+}
+
+.list-group-item{
+    min-height: 50px;
+}

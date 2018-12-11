@@ -3,11 +3,11 @@
 
   <hr>
 
-  <div class="row">
+  <div class="row container-fluid d-flex">
     <!-- Lista Frutas -->
-    <div class="col col-2">
+    <div class="col col-2 d-flex flex-column">
       <h4 class="text-center">Lista frutas</h4>
-      <div class="list-group">
+      <div class="list-group list-group-flush scrolly">
         <button type="button" class="list-group-item list-group-item-action active" 
         *ngFor="let f of frutas" (click)="mostrar(f)" [class.active]="f == f1 || f == f2">
           {{f.nombre}}
