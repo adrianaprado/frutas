@@ -83,7 +83,7 @@
       "oferta": true,
       "descuento": 15,
       "imagen": "http://www.triamax.com/wp-content/uploads/2015/02/uvas.jpg",
-      "cantidad": 5,
+      "cant": 1,
       "id": 6
     },
 	{
@@ -96,9 +96,9 @@
         "marron"
       ],
       "oferta": false,
-      "descuento": 0,
+      "descuento": 5,
       "imagen": "https://www.webconsultas.com/sites/default/files/styles/encabezado_articulo/public/migrated/melon.jpg",
-      "cantidad": 5,
+      "cant": 1,
       "id": 7
     },
 	{
@@ -111,9 +111,9 @@
         "rojo"
       ],
       "oferta": false,
-      "descuento": 0,
+      "descuento": 5,
       "imagen": "https://www.comenaranjas.com/images/stories/virtuemart/product/sandia-rayada.jpg",
-      "cantidad": 5,
+      "cant": 1,
       "id": 8
     },
 	{
@@ -128,7 +128,7 @@
       "oferta": true,
       "descuento": 5,
       "imagen": "https://www.hogarmania.com/archivos/201307/albaricoque3-xl-668x400x80xX.jpg",
-      "cantidad": 5,
+      "cant": 1,
       "id": 9
     },
 	{
@@ -141,9 +141,9 @@
         "amarillo"
       ],
       "oferta": false,
-      "descuento": 0,
+      "descuento": 5,
       "imagen": "https://www.abc.es/media/sociedad/2016/08/05/agua-coco-propiedades2-kfwC--620x349@abc.jpg",
-      "cantidad": 5,
+      "cant": 1,
       "id": 10
     },
 	{
@@ -158,7 +158,7 @@
       "oferta": true,
       "descuento": 20,
       "imagen": "https://zumodegranada.com/wp-content/uploads/2017/06/granada_web_15.jpg",
-      "cantidad": 1,
+      "cant": 1,
       "id": 11
     },
 	{
@@ -172,7 +172,7 @@
       "oferta": false,
       "descuento": 5,
       "imagen": "https://static.vix.com/es/sites/default/files/imj/vivirsalud/1/142534212.jpg",
-      "cantidad": 1,
+      "cant": 1,
       "id": 12
     },
 	{
@@ -186,7 +186,7 @@
       "oferta": true,
       "descuento": 10,
       "imagen": "https://www.frutadelasarga.com/server/Portal_0008706/img/products/cereza-temprana_2930904.jpg",
-      "cantidad": 1,
+      "cant": 1,
       "id": 13
     },
 	{
@@ -200,7 +200,7 @@
       "oferta": false,
       "descuento": 5,
       "imagen": "https://www.enterbio.es/8232-large_default/frambuesa.jpg",
-      "cantidad": 1,
+      "cant": 1,
       "id": 14
     },
 	{
@@ -216,7 +216,7 @@
       "oferta": true,
       "descuento": 35,
       "imagen": "https://www.heb.com.mx/media/catalog/product/cache/20/image/d954a60aa48ef57022b0eb878e93bc1f/p/i/pina-miel-gold115389_x1.jpg",
-      "cantidad": 1,
+      "cant": 1,
       "id": 15
     },
 	{
@@ -230,7 +230,7 @@
       "oferta": false,
       "descuento": 5,
       "imagen": "https://www.frutadelasarga.com/server/Portal_0008706/img/products/naranja-navelina_1241713.jpg",
-      "cantidad": 1,
+      "cant": 1,
       "id": 16
     },
 	{
@@ -244,7 +244,7 @@
       "oferta": true,
       "descuento": 15,
       "imagen": "https://www.fruteriadevalencia.com/wp-content/uploads/2015/02/MANGO-buena.jpg",
-      "cantidad": 1,
+      "cant": 1,
       "id": 17
     },
 	{
@@ -258,7 +258,7 @@
       "oferta": false,
       "descuento": 5,
       "imagen": "https://www.enterbio.es/8233-large_default/mora.jpg",
-      "cantidad": 1,
+      "cant": 1,
       "id": 18
     },
 	{
@@ -272,7 +272,7 @@
       "oferta": true,
       "descuento": 10,
       "imagen": "https://cronicaglobal.elespanol.com/uploads/s1/95/08/34/limon.jpg",
-      "cantidad": 1,
+      "cant": 1,
       "id": 19
     },
 	{
@@ -287,7 +287,7 @@
       "oferta": false,
       "descuento": 5,
       "imagen": "https://biotrendies.com/wp-content/uploads/2015/06/Higos.jpg",
-      "cantidad": 1,
+      "cant": 1,
       "id": 20
     }
   ]
