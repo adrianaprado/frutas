@@ -144,9 +144,12 @@ export class GestionFrutasComponent implements OnInit {
     fruta.imagen = this.formulario.controls.imagen.value;
     fruta.oferta = this.formulario.controls.oferta.value;
 
-    this.formulario.get('colores').controls.forEach(color => {
-      const colorFormControl = color.controls.color.value;
+    const arrayColores = this.formulario.get('colores') as FormArray;
+
+    arrayColores.controls.forEach(color => {
+      const colorFormControl = color.value.color;
       fruta.colores.push(colorFormControl);
+      console.trace('formControlColor', color);
     });
 
     /** Si es menor que 0 se esta creando una fruta nueva */

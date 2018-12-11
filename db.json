@@ -6,8 +6,8 @@
       "precio": 3.15,
       "calorias": 500,
       "colores": [
-        "amarillo",
-        "negro"
+        "Amarillo",
+        "Negro"
       ],
       "oferta": true,
       "descuento": 20,
@@ -48,8 +48,8 @@
       "precio": 0.75,
       "calorias": 5,
       "cant": 1,
-      "oferta": false,
-      "descuento": 0,
+      "oferta": true,
+      "descuento": 10,
       "imagen": "https://www.frutadelasarga.com/server/Portal_0008706/img/products/melocoton-de-cieza_1677407.jpg",
       "colores": [
         "Naranja",
