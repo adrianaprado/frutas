@@ -3,8 +3,8 @@
       Listado completo de frutas
   </h2>
 
-  <div class="row mt-3">
-    <div class="col mb-2" *ngFor="let fr of frutas">
+  <div class="row mt-3 justify-content-start">
+    <div class="col col-4 mb-2" *ngFor="let fr of frutas">
       <app-fruta-card [_fruta]="fr"></app-fruta-card>
     </div>
   </div>

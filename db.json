@@ -2,7 +2,7 @@
   "frutas": [
     {
       "id": 1,
-      "nombre": "banana",
+      "nombre": "Banana",
       "precio": 3.15,
       "calorias": 500,
       "colores": [
@@ -56,6 +56,20 @@
         "Verde"
       ],
       "id": 4
+    },
+    {
+      "nombre": "Manzana",
+      "precio": 2.3,
+      "calorias": 13,
+      "cant": 1,
+      "oferta": false,
+      "descuento": 0,
+      "imagen": "http://www.redagricola.com/cl/assets/uploads/2017/08/manazana-792x591-c-default.jpg",
+      "colores": [
+        "Rojo",
+        "Verde"
+      ],
+      "id": 5
     }
   ]
 }

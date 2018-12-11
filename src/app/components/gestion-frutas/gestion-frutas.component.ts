@@ -155,15 +155,15 @@ export class GestionFrutasComponent implements OnInit {
     /** Si es menor que 0 se esta creando una fruta nueva */
     if (id < 0) {
       this.frutaService.add(fruta).subscribe(data => {
-        console.debug(data);
-        this.formulario.controls.nombre.setValue('');
+        console.debug('data %o ', data);
+        /*this.formulario.controls.nombre.setValue('');
         this.formulario.controls.precio.setValue(0);
         this.formulario.controls.calorias.setValue(0);
         this.formulario.controls.cantidad.setValue(1);
         this.formulario.controls.oferta.setValue(false);
         this.formulario.controls.descuento.setValue(10);
         this.formulario.controls.imagen.setValue('');
-        this.formulario.controls.colores.setValue([{color: ''}]);
+        this.formulario.controls.colores.setValue([{color: ''}]);*/
         this.mensaje = 'Fruta creada correctamente';
         // this.router.navigate(['backoffice']);
       });

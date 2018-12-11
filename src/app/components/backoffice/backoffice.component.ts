@@ -9,6 +9,7 @@ import { Fruta } from 'src/app/models/fruta';
   styleUrls: ['./backoffice.component.scss']
 })
 export class BackofficeComponent implements OnInit {
+  tableWidget: any;
   frutas: Fruta[];
   frutaDetalle: Fruta;
   idFruta: number;
