@@ -51,7 +51,11 @@ export class ComparadorFrutasComponent implements OnInit {
 
     this.frutaRecibida = event['frutaClick'];
 
-    this.precioTotal += this.frutaRecibida.precio;
+    if (this.frutaRecibida.oferta) {
+      this.precioTotal += this.frutaRecibida.precio - (this.frutaRecibida.precio * this.frutaRecibida.descuento) / 100;
+    } else {
+      this.precioTotal += this.frutaRecibida.precio;
+    }
 
     let f: Fruta;
     f = this.frutasRecibidas.find(el => el.nombre === this.frutaRecibida.nombre);
@@ -66,7 +70,12 @@ export class ComparadorFrutasComponent implements OnInit {
 
   borrarProducto(fruta: Fruta) {
     console.debug('borrarProducto de ComparadorFrutasComponent');
-    this.precioTotal = this.precioTotal - (fruta.precio * fruta.cant);
+    if (fruta.oferta) {
+      const descuento = this.frutaRecibida.precio - this.frutaRecibida.precio * this.frutaRecibida.descuento / 100;
+      this.precioTotal = this.precioTotal - (descuento * fruta.cant);
+    } else {
+      this.precioTotal = this.precioTotal - (fruta.precio * fruta.cant);
+    }
     fruta.cant = 1;
     let pos: number;
     pos = this.frutasRecibidas.indexOf(fruta);
@@ -76,7 +85,12 @@ export class ComparadorFrutasComponent implements OnInit {
   anyadir(fruta: Fruta) {
     console.debug('anyadir de ComparadorFrutasComponent');
     fruta.cant += 1;
-    this.precioTotal += fruta.precio;
+    if (fruta.oferta) {
+      const descuento = this.frutaRecibida.precio - this.frutaRecibida.precio * this.frutaRecibida.descuento / 100;
+      this.precioTotal += descuento;
+    } else {
+      this.precioTotal += fruta.precio;
+    }
   }
 
   quitar(fruta: Fruta) {
@@ -85,7 +99,12 @@ export class ComparadorFrutasComponent implements OnInit {
     if (fruta.cant < 1) {
       fruta.cant = 1;
     } else {
-      this.precioTotal -= fruta.precio;
+      if (fruta.oferta) {
+        const descuento =  this.frutaRecibida.precio - this.frutaRecibida.precio * this.frutaRecibida.descuento / 100;
+        this.precioTotal -=  descuento;
+      } else {
+        this.precioTotal -= fruta.precio;
+      }
     }
   }
 
