@@ -26,14 +26,14 @@ export class LoginComponent implements OnInit {
   private crearFormulario() {
     this.formulario = new FormGroup({
       nombre: new FormControl(
-        '',
+        'admin',
         [
           Validators.required,
           Validators.minLength(2),
           Validators.maxLength(25)
         ]),
       password: new FormControl(
-        '',
+        'admin',
         [
           Validators.required,
           Validators.minLength(2),

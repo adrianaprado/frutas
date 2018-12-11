@@ -13,10 +13,14 @@ export class BackofficeComponent implements OnInit {
   frutas: Fruta[];
   frutaDetalle: Fruta;
   idFruta: number;
+  mensaje: string;
+  todas: boolean;
 
   constructor(public frutaService: FrutaService, public router: Router) {
     console.trace('BackofficeComponent constructor');
     this.frutas = [];
+    this.mensaje = '';
+    this.todas = false;
   }
 
   ngOnInit() {
@@ -37,6 +41,16 @@ export class BackofficeComponent implements OnInit {
     this.frutaService.delete(id).subscribe(data => {
       console.debug('Datos recibidos $%o', data);
       this.recargarLista();
+      this.mensaje = 'Fruta eliminada correctamente';
     });
+  }
+
+  filtrar(filtro: number) {
+    console.trace('TareaComponent filtrar ' + this.todas);
+    if (filtro === 0) {
+      this.todas = true;
+    } else {
+      this.todas = false;
+    }
   }
 }

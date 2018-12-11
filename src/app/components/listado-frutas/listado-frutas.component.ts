@@ -12,10 +12,13 @@ export class ListadoFrutasComponent implements OnInit {
   frutas: Fruta[];
   frutaDetalle: Fruta;
   idFruta: number;
+  todas: boolean;
+  nueva: string;
 
   constructor(public frutaService: FrutaService, public router: Router) {
     console.trace('ListadoFrutasComponent constructor');
     this.frutas = [];
+    this.todas = false;
   }
 
   ngOnInit() {
@@ -29,5 +32,14 @@ export class ListadoFrutasComponent implements OnInit {
       console.debug('Datos recibidos $%o', data);
       this.frutas = data.map(el => el);
     });
+  }
+
+  filtrar(filtro: number) {
+    console.trace('TareaComponent filtrar ' + this.todas);
+    if (filtro === 0) {
+      this.todas = true;
+    } else {
+      this.todas = false;
+    }
   }
 }

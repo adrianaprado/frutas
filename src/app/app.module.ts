@@ -21,6 +21,8 @@ import { FrutaService } from './providers/fruta.service';
 // Guards
 import { BackofficeGuard } from './guards/backoffice.guard';
 import { BackofficeComponent } from './components/backoffice/backoffice.component';
+import { FrutasPipe } from './pipes/frutas.pipe';
+import { FrutaBuscarPipe } from './pipes/fruta-buscar.pipe';
 
 
 @NgModule({
@@ -31,7 +33,9 @@ import { BackofficeComponent } from './components/backoffice/backoffice.componen
     FrutaCardComponent,
     LoginComponent,
     BackofficeComponent,
-    GestionFrutasComponent
+    GestionFrutasComponent,
+    FrutasPipe,
+    FrutaBuscarPipe
   ],
   imports: [
     BrowserModule,

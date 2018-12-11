@@ -31,13 +31,13 @@ export class FrutaService {
 
   add(fruta: Fruta): Observable<any> {
     console.trace('FrutaService add');
-    let descuento;
+    // let descuento;
 
-    if (!fruta.oferta) {
+    /*if (!fruta.oferta) {
       descuento = 0;
     } else {
       descuento = fruta.descuento;
-    }
+    }*/
 
     const body = {
       'nombre': fruta.nombre,
@@ -45,7 +45,7 @@ export class FrutaService {
       'calorias': fruta.calorias,
       'cant': fruta.cant,
       'oferta': fruta.oferta,
-      'descuento': descuento,
+      'descuento': fruta.descuento,
       'imagen': fruta.imagen,
       'colores': fruta.colores
     };
@@ -60,13 +60,13 @@ export class FrutaService {
   update(fruta: Fruta): Observable<any> {
     console.trace('FrutaService update');
     const uri = this.endpoint + '/' + fruta.id;
-    let descuento;
+    /*let descuento;
 
     if (!fruta.oferta) {
       descuento = 0;
     } else {
       descuento = fruta.descuento;
-    }
+    }*/
 
     const body = {
       'nombre': fruta.nombre,
@@ -74,7 +74,7 @@ export class FrutaService {
       'calorias': fruta.calorias,
       'cant': fruta.cant,
       'oferta': fruta.oferta,
-      'descuento': descuento,
+      'descuento': fruta.descuento,
       'imagen': fruta.imagen,
       'colores': fruta.colores
     };
