@@ -18,7 +18,7 @@
     <button (click)="comprar()" class="btn btn-block btn-outline-primary">Comprar</button>
     <hr>
     <div *ngIf="fruta2">
-      <p><b>Precio: </b><span class="{{fruta.precio - fruta2.precio>0?'positivo':'negativo'}}">{{fruta.precio - fruta2.precio | number:'1.2-2'}}</span> &euro; </p>
+      <p><b>Precio: </b><span class="{{compararPrecios(fruta, fruta2)>0?'negativo':'positivo'}}">{{compararPrecios(fruta, fruta2) | number:'1.2-2'}}</span> &euro; </p>
       <p><b>Calorías: </b><span class="{{fruta.calorias - fruta2.calorias>0?'negativo':'positivo'}}"> {{fruta.calorias - fruta2.calorias}} </span> Kcal</p>
     </div>
    </div>

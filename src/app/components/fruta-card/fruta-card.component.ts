@@ -51,4 +51,22 @@ export class FrutaCardComponent implements OnInit {
     this.clickCompra.emit( {frutaClick : this.fruta} );
   }
 
+  compararPrecios(fruta1: Fruta, fruta2: Fruta): number {
+    let resultado;
+    if (fruta1.oferta && !fruta2.oferta) {
+      const descuento = fruta1.precio - (fruta1.precio * fruta1.descuento) / 100;
+      resultado = descuento - fruta2.precio;
+    } else if (fruta2.oferta && !fruta1.oferta) {
+      const descuento = fruta2.precio - (fruta2.precio * fruta2.descuento) / 100;
+      resultado = fruta1.precio - descuento;
+    } else if (fruta1.oferta && fruta2.oferta) {
+      const descuento1 = fruta1.precio - (fruta1.precio * fruta1.descuento) / 100;
+      const descuento2 = fruta2.precio - (fruta2.precio * fruta2.descuento) / 100;
+      resultado = descuento1 - descuento2;
+    } else {
+      resultado = fruta1.precio - fruta2.precio;
+    }
+    return resultado;
+  }
+
 }
