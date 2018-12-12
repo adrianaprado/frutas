@@ -1,6 +1,6 @@
 {
   "frutas": [
-    {
+	{
       "id": 1,
       "nombre": "Banana",
       "precio": 3.15,

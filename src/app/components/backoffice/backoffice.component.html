@@ -56,10 +56,10 @@
           <tr *ngFor="let fr of frutas | oferta:todas | buscar:nueva" class="text-center">
             <td>{{fr.id}}</td>
             <td><a [routerLink]="['../gestion-frutas', fr.id]">{{fr.nombre}}</a></td>
-            <td>{{fr.precio}}</td>
-            <td>{{fr.calorias}}</td>
-            <td *ngIf="fr.oferta">Si</td>
-            <td *ngIf="!fr.oferta">No</td>
+            <td>{{fr.precio}} &euro;</td>
+            <td>{{fr.calorias}} Kcal.</td>
+            <td *ngIf="fr.oferta"><i class="fas fa-check-circle text-success"></i></td>
+            <td *ngIf="!fr.oferta"><i class="fas fa-plus-circle text-danger"></i></td>
             <td> <img style="width:50px" src="{{fr.imagen}}" alt="imagen-fruta"> </td>
             <td><i (click)="eliminarFruta(fr.id)" class="fas fa-trash-alt text-danger"></i></td>
           </tr>
