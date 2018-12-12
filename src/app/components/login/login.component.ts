@@ -4,6 +4,9 @@ import { Router } from '@angular/router';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { Usuario } from 'src/app/models/usuario';
 
+const ALERTA_WARNING = 'warning';
+const ALERTA_INFO = 'info';
+
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -12,11 +15,13 @@ import { Usuario } from 'src/app/models/usuario';
 export class LoginComponent implements OnInit {
   formulario: FormGroup;
   mensaje: string;
+  tipoAlerta: string;
 
   constructor(private loginService: LoginService, private router: Router) {
     console.trace('LoginComponent constructor');
     this.crearFormulario();
     this.mensaje = '';
+    this.tipoAlerta = ALERTA_INFO;
   }
 
   ngOnInit() {
@@ -44,7 +49,6 @@ export class LoginComponent implements OnInit {
 
   enviar() {
     console.trace('Enviar');
-    // TODO llamar al servicio de login
     const nombre = this.formulario.controls.nombre.value;
     const password = this.formulario.controls.password.value;
 
@@ -59,6 +63,7 @@ export class LoginComponent implements OnInit {
       this.router.navigate(['privado']);
     } else {
       this.mensaje = 'Credenciales no válidas. Por favor, inténtalo de nuevo';
+      this.tipoAlerta = ALERTA_WARNING;
     }
   }
 

@@ -1,6 +1,6 @@
 <div class="text-left mt-4">
 
-  <div *ngIf="mensaje" class="alert alert-warning alert-dismissible fade show" role="alert">
+  <div *ngIf="mensaje" class="alert alert-{{tipoAlerta}} alert-dismissible fade show" role="alert">
     <span>{{mensaje}}</span>
     <button type="button" class="close" data-dismiss="alert" aria-label="Close">
       <span aria-hidden="true">&times;</span>
@@ -57,20 +57,6 @@
         </div>
         <input type="submit" class="btn btn-outline-primary btn-block" [disabled]="formulario.status === 'INVALID'" value="Entrar">
       </form>
-    </div>
-  </div>
-
-  <hr>
-
-  <div class="row justify-content-center">
-    <div class="col col-4">
-      <p><b>Valores:</b> {{formulario.value | json}}</p>
-    </div>
-  </div>
-
-  <div class="row justify-content-center">
-    <div class="col col-4">
-      <p><b>Estado:</b> {{formulario.status | json}} </p>
     </div>
   </div>
 

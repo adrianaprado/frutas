@@ -4,13 +4,16 @@
   </h2>
 
   <div class="row mt-4 mb-2 justify-content-between">
+    <!-- Filtro -->
     <div class="col col-4">
       <div class="btn-group" role="group" aria-label="Basic example">
         <button type="button" (click)="filtrar(1)" class="btn btn-success {{(todas)?'':'active'}}">Todas</button>
         <button type="button" (click)="filtrar(0)" class="btn btn-success {{(!todas)?'':'active'}}">En oferta</button>
       </div>
     </div>
+    <!-- /Filtro -->
     
+    <!-- Buscador -->
     <div class="col col-3">
       <div class="input-group mb-3">
         <input type="text" [(ngModel)]="nombreBuscar" class="form-control" placeholder="Fruta a buscar...">
@@ -19,6 +22,7 @@
         </div>
       </div>
     </div>
+    <!-- /Buscador -->
   </div>
 
   <div class="row mt-3 justify-content-start">

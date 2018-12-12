@@ -1,14 +1,20 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, Router } from '@angular/router';
+import { ActivatedRoute } from '@angular/router';
 import { Fruta } from 'src/app/models/fruta';
 import { FormGroup, FormArray, FormControl, Validators } from '@angular/forms';
 import { FrutaService } from 'src/app/providers/fruta.service';
+
+const ALERTA_SUCCESS = 'success';
+const ALERTA_WARNING = 'warning';
+const ALERTA_INFO = 'info';
 
 @Component({
   selector: 'app-gestion-frutas',
   templateUrl: './gestion-frutas.component.html',
   styleUrls: ['./gestion-frutas.component.scss']
 })
+
+
 export class GestionFrutasComponent implements OnInit {
   id: number;
   frutaDetalle: Fruta;
@@ -16,11 +22,16 @@ export class GestionFrutasComponent implements OnInit {
   colores: FormArray;
   urlPattern: string;
 
+  // Referente a mensajes al usuario
   mensaje: string;
+  tipoAlerta: string;
 
-  constructor(private route: ActivatedRoute, public frutaService: FrutaService, private router: Router) {
+  constructor(private route: ActivatedRoute, public frutaService: FrutaService) {
     console.trace('GestionFrutasComponent constructor');
+
     this.mensaje = '';
+    this.tipoAlerta = ALERTA_INFO;
+
     this.id = 0;
     /* Patron para que la url de imagen empiece por http(s) y acabe por jpg, png o jpeg */
     this.urlPattern = '^(http(s?)):\/\/.+\.(jpg|png|jpeg)$';
@@ -156,16 +167,7 @@ export class GestionFrutasComponent implements OnInit {
     if (id < 0) {
       this.frutaService.add(fruta).subscribe(data => {
         console.debug('data %o ', data);
-        /*this.formulario.controls.nombre.setValue('');
-        this.formulario.controls.precio.setValue(0);
-        this.formulario.controls.calorias.setValue(0);
-        this.formulario.controls.cantidad.setValue(1);
-        this.formulario.controls.oferta.setValue(false);
-        this.formulario.controls.descuento.setValue(10);
-        this.formulario.controls.imagen.setValue('');
-        this.formulario.controls.colores.setValue([{color: ''}]);*/
         this.mensaje = 'Fruta creada correctamente';
-        // this.router.navigate(['backoffice']);
       });
     /** Si id > 0 la fruta existe y se esta actualizando */
     } else {
@@ -173,6 +175,12 @@ export class GestionFrutasComponent implements OnInit {
       this.frutaService.update(fruta).subscribe(data => {
         console.debug(data);
         this.mensaje = 'Fruta modificada correctamente';
+        this.tipoAlerta = ALERTA_SUCCESS;
+      },
+      error => {
+          console.warn('Error' + error);
+          this.mensaje = 'No se ha podido modificar la fruta';
+          this.tipoAlerta = ALERTA_WARNING;
       });
     }
   }
