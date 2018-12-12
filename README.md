@@ -67,8 +67,27 @@ Para poder realizar altas, bajas y modificaciones de las frutas, es necesario es
 
 ![Login](https://github.com/adrianaprado/frutas/blob/master/src/assets/imgs/Login.PNG)
 
+La parte privada tiene dos vistas:
+1. Lista privada de las frutas con acceso a cada uno de sus detalles para modificarlas y un icono para borrar cada fruta.
+
+![Lista-privada](https://github.com/adrianaprado/frutas/blob/master/src/assets/imgs/ListaPrivadaGestion.PNG)
+
+2. Un formulario que actúa como creación de una nueva fruta o como modificación de valores de una fruta existente.
+
+![Formulario-fruta](https://github.com/adrianaprado/frutas/blob/master/src/assets/imgs/Formulario.PNG)
+
+![Formulario-fruta-modificar](https://github.com/adrianaprado/frutas/blob/master/src/assets/imgs/Formulario-modificar.PNG)
+
 ## Pasos para ejecutar la app
-Clonar el proyecto a una carpeta del ordenador
-Abrir una ventana de comandos y estando en la carpeta donde se va a clonar el proyecto, ejecutar `git clone https://github.com/adrianaprado/frutas.git`
-Comprobar que este el db.json y ejecutarlo con 
-`json-server --watch db.json`
+Lo primero que se tiene que hacer es clonar el proyecto a una carpeta de nuestro ordenador. Abrir una ventana de comandos en la carpeta donde se va a clonar el proyecto y ejecutar `git clone https://github.com/adrianaprado/frutas.git`
+
+Al haber usado `json-server` es necesario tener la dependencia de ésta. Para instalarlo ir al siguiente [enlace](https://github.com/typicode/json-server) que lleva a la página de github de `json-server`.
+
+Antes de ejecutar el proyecto es necesario abrir una ventana de comandos y en la carpeta del proyecto ejecutar `json-server --watch db.json` para poder acceder a todos los datos de la aplicación.
+
+---
+
+En caso de querer iniciar sesión en la aplicación, las credenciales para poder acceder son:
+
+- **Usuario:** admin
+- **Contraseña:** admin
