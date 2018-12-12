@@ -28,16 +28,8 @@ Para más información sobre Angular CLI ejecuta `ng help` o diríjete a [Angula
 
 ----------
 
-## Sobre el proyecto
+## Funciones realizadas
 El proyecto realizado en Angular llamado frutas, es una aplicación desarrollada para aplicar todos los conocimientos aprendidos acerca de Angular.
-
-A grandes rasgos, esta aplicación es una frutería, donde se gestionan las frutas a vender.
-
-Lo primero que un usuario ve nada más entrar es una lista de frutas con un comparador para ver las diferencias de precios y kilocalorías que tiene cada fruta.
-
-También hay una pestaña donde se pueden ver todas las frutas en cartas con toda la información de éstas.
-
-Para poder realizar altas, bajas y modificaciones de las frutas, es necesario estar con sesión iniciada. Si no se está, es imposible acceder a esas vistas de gestión. 
 
 Las funcionalidades que se han implementado en este proyecto son:
 
@@ -48,6 +40,32 @@ Las funcionalidades que se han implementado en este proyecto son:
 - Servicios o providers
 
 Además, se ha utilizado [json-server](https://github.com/typicode/json-server) para simular la interacción con una Base de datos para las llamadas del servicio.
+
+---
+
+## Descripción del proyecto
+
+A grandes rasgos, esta aplicación es una frutería, donde se gestionan las frutas a vender.
+
+Lo primero que un usuario ve nada más entrar es una lista de frutas con un comparador para ver las diferencias de precios y kilocalorías que tiene cada fruta.
+
+![Comparador](https://github.com/adrianaprado/frutas/blob/master/src/assets/imgs/Comparador.PNG)
+
+También hay una pestaña donde se pueden ver todas las frutas en cartas con toda la información de éstas.
+
+![Cards-Frutas](https://github.com/adrianaprado/frutas/blob/master/src/assets/imgs/CardsFrutas.PNG)
+
+En esta vista, pueden filtrarse las frutas para mostrar todas las existentes o sólo las que estén en oferta.
+
+![Filtro-Oferta](https://github.com/adrianaprado/frutas/blob/master/src/assets/imgs/Filtro.PNG)
+
+También se puede realizar una búsqueda de las frutas por su nombre.
+
+![Busqueda-frutas](https://github.com/adrianaprado/frutas/blob/master/src/assets/imgs/Buscador.PNG)
+
+Para poder realizar altas, bajas y modificaciones de las frutas, es necesario estar con sesión iniciada. Si no se está, es imposible acceder a esas vistas de gestión. 
+
+![Login](https://github.com/adrianaprado/frutas/blob/master/src/assets/imgs/Login.PNG)
 
 ## Pasos para ejecutar la app
 Clonar el proyecto a una carpeta del ordenador
