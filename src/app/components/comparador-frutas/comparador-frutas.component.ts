@@ -71,7 +71,7 @@ export class ComparadorFrutasComponent implements OnInit {
   borrarProducto(fruta: Fruta) {
     console.debug('borrarProducto de ComparadorFrutasComponent');
     if (fruta.oferta) {
-      const descuento = this.frutaRecibida.precio - this.frutaRecibida.precio * this.frutaRecibida.descuento / 100;
+      const descuento = fruta.precio - fruta.precio * fruta.descuento / 100;
       this.precioTotal = this.precioTotal - (descuento * fruta.cant);
     } else {
       this.precioTotal = this.precioTotal - (fruta.precio * fruta.cant);
@@ -86,7 +86,7 @@ export class ComparadorFrutasComponent implements OnInit {
     console.debug('anyadir de ComparadorFrutasComponent');
     fruta.cant += 1;
     if (fruta.oferta) {
-      const descuento = this.frutaRecibida.precio - this.frutaRecibida.precio * this.frutaRecibida.descuento / 100;
+      const descuento = fruta.precio - fruta.precio * fruta.descuento / 100;
       this.precioTotal += descuento;
     } else {
       this.precioTotal += fruta.precio;
@@ -100,7 +100,7 @@ export class ComparadorFrutasComponent implements OnInit {
       fruta.cant = 1;
     } else {
       if (fruta.oferta) {
-        const descuento =  this.frutaRecibida.precio - this.frutaRecibida.precio * this.frutaRecibida.descuento / 100;
+        const descuento =  fruta.precio - fruta.precio * fruta.descuento / 100;
         this.precioTotal -=  descuento;
       } else {
         this.precioTotal -= fruta.precio;
