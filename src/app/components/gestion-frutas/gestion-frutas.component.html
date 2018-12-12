@@ -12,6 +12,10 @@
         </button>
       </div>
       <!-- /Alerta -->
+
+      <div class="text-right mb-2">
+        <a class="btn btn-outline-primary" (click)="vaciarCampos()">Crear nueva fruta</a>
+      </div>
     
       <!-- form -->
       <form [formGroup]="formulario" novalidate (ngSubmit)="enviarFruta(id)">

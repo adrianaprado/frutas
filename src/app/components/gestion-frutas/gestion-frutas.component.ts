@@ -185,4 +185,15 @@ export class GestionFrutasComponent implements OnInit {
     }
   }
 
+  vaciarCampos() {
+    this.formulario.controls.nombre.setValue('');
+    this.formulario.controls.precio.setValue(0);
+    this.formulario.controls.calorias.setValue(0);
+    this.formulario.controls.cantidad.setValue(1);
+    this.formulario.controls.oferta.setValue(false);
+    this.formulario.controls.descuento.setValue(10);
+    this.formulario.controls.imagen.setValue('');
+    this.formulario.controls.colores.setValue([{color: ''}]);
+  }
+
 }
