@@ -24,7 +24,7 @@
     
     <!-- Buscador -->
     <div class="col col-3">
-      <div class="input-group mb-3">
+      <div class="input-group mb-2">
         <input type="text" [(ngModel)]="nueva" class="form-control" placeholder="Fruta a buscar...">
         <div class="input-group-prepend">
           <span class="input-group-text"><i class="fas fa-search"></i></span>
@@ -34,9 +34,11 @@
     <!-- /Buscador -->
   </div>
 
-  <a class="btn btn-outline-primary" [routerLink]="['../gestion-frutas', -1]">Crear nueva fruta</a>
-  <div class="row mt-3 table-responsive">
-    <div class="col">
+  <div class="text-right mb-2">
+    <a class="btn btn-outline-primary" [routerLink]="['../gestion-frutas', -1]">Crear nueva fruta</a>
+  </div>
+  
+  <div class="tabla-scroll mt-3 table-responsive">
       <!-- Tabla -->
       <table class="table table-striped display" id="datatable" style="width:100%">
         <thead class="thead-dark">
@@ -64,6 +66,5 @@
         </tbody>
       </table>
       <!-- /Tabla -->
-    </div>
   </div>
 </div>
