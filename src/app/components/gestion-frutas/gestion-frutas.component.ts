@@ -185,6 +185,13 @@ export class GestionFrutasComponent implements OnInit {
     }
   }
 
+  eliminarColor( index: number) {
+    const arrayColores = this.formulario.get('colores') as FormArray;
+    if ( arrayColores.length > 1 ) {
+      arrayColores.removeAt(index);
+    }
+  }
+
   vaciarCampos() {
     this.formulario.controls.nombre.setValue('');
     this.formulario.controls.precio.setValue(0);
